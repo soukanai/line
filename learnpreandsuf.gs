@@ -1,4 +1,4 @@
-//小・中学生向けの英語学習の為のLINEボット（制作中）です。
+//個人的な英語学習の為のLINEボットです。
 //ボットに向かって気になる接頭語か接尾語を喋るとボットがGoogleスプレッドシートから詳細情報を拾って返答します。
 
 var CHANNEL_ACCESS_TOKEN = 'Q/RI2iBYC8Q/LPI5NM/Oj1j/yQSW8/6KmNttSWLZeLa5IGrWidUjVtvaZZ9J61xe+Ml/F/NrP5i5Hu2JjXuSOvIGQ7wCUNVvqN3cTDZshc/JX5wK6X6Jz1C+Wxdd435t4x8uRjEB9THIwsY3cut8FgdB04t89/1O/w1cDnyilFU='; 
