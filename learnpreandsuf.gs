@@ -17,13 +17,18 @@ function doPost(e) {
 
   var user_message = json.events[0].message.text;  
   
+  //スプレッドシートを取得
   var spreadsheet = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/1XyhzdgO1X0p8hPzMVMjAyeoMod_lLjB5AJfXtXxnoe0/edit#gid=0');
+  
+  //シートをシート名で取得
   var sheet = spreadsheet.getSheetByName("List 01");
   
+  //シートの最後の行を取得
   var lastRow = sheet.getLastRow();
   
   var reply_messages;
   
+  //各列のセルの値を取得
   for(var i=1; i<=lastRow; i++) {
     
     var rowA = sheet.getRange(i, 1);
@@ -40,6 +45,7 @@ function doPost(e) {
     
     if (rowAValue == user_message) {
       
+      //返答メッセージ
       reply_messages = ["「" + user_message + "」は「" + rowA.offset(0, 1).getValue() + "」という意味の「" + rowB.offset(0, 1).getValue() + "」で「" + rowC.offset(0, 1).getValue() + "」で使用されています。"];
       
     }
